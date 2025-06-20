@@ -28,6 +28,10 @@ Odoo es una plataforma modular que integra aplicaciones de gestión empresarial 
    POSTGRES_DB=postgres
    ```
 
+3. Crea carpeta `addons` en la raiz para los modulos personalizados
+
+4. Crear carpeta `postgresql` en la raiz para persistir datos
+
 3. **Levanta los servicios**
    ```bash
    docker-compose up -d
