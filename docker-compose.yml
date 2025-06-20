@@ -1,0 +1,23 @@
+services:
+  web:
+    image: odoo:latest
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./addons:/mnt/extra-addons # carpeta para los modulos personalizados
+      - ./odoo.conf:/etc/odoo/odoo.conf # archivo de configuracion de odoo
+
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
