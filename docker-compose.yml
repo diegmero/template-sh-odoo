@@ -13,9 +13,9 @@ services:
   db:
     image: postgres:15
     environment:
-      - POSTGRES_USER=odoo
-      - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER={POSTGRES_USER}
+      - POSTGRES_DB={POSTGRES_DB}
+      - POSTGRES_PASSWORD={ṔOSTGRES_PASSWORD}
     volumes:
       - ./postgresql:/var/lib/postgresql/data
 
